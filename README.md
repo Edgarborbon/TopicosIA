@@ -23,5 +23,5 @@ Este proyecto explora el potencial de la Inteligencia Artificial (IA) para comba
 
 Compañera de Equipo: Millán López Ana Karen
 
-* **ARCHIVO:** https://github.com/AnaKMLopez/ITCAKML-Topicos-IA
+* **ARCHIVO:** [https://github.com/AnaKMLopez/ITCAKML-Topicos-IA](https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/5234a28e6ba0bad6b457bedf58fba85ae238abe5/MODULO%201/Proyecto.pdf)
 
