@@ -25,3 +25,4 @@ Compañera de Equipo: Millán López Ana Karen
 
 * **ARCHIVO:** [https://github.com/AnaKMLopez/ITCAKML-Topicos-IA](https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/5234a28e6ba0bad6b457bedf58fba85ae238abe5/MODULO%201/Proyecto.pdf)
 
+* **ARCHIVO:** [https://github.com/AnaKMLopez/ITCAKML-Topicos-IA}https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/efbe1cd5149442dcb819ec4f517dd8dd875bd0f7/MODULO%201/Inteligencia%20Artificial%20para%20el%20Cuidado%20del%20Agua%20-%20Exposici%C3%B3n.pdf
