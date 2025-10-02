@@ -7,7 +7,7 @@ Este repositorio funcionará como mi portafolio durante el curso.
 
 
 * **Alumno:** Borbón Sánchez Edgar
-* **No. Control:** 16171301
+* **No. Control:** C16171301
 * **Maestro:** Mora Felix Zuriel Dathan
 * **Clave de la materia:** GTD2102
 * **Grupo:** 12:00-13:00
