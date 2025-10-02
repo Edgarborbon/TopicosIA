@@ -1,0 +1,51 @@
+INPUT (T₀, α, β, L, T_f, N)
+
+BEGIN
+
+    T ← T₀
+
+    S_act ← Genera_Solución_Inicial { [5, 2, 8, 1, 3, 7, 4, 6, 0] }
+
+    S_mejor ← S_act
+
+    N ← longitud:S_act
+
+    WHILE T ≥ T_f DO
+
+        BEGIN
+
+            FOR count ← 1 TO L DO
+
+                BEGIN
+
+                    IF T > N
+
+                        S_cand ← Genera_Vecino_Aleatorio_Agresivo(S_act)
+                    
+                    ELSE
+                        
+                        S_cand ← Genera_Vecino_Aleatorio(S_act)
+
+                    δ ← Cost(S_cand) - Cost(S_act)
+
+                    IF (U(0,1) < e^(-δ/T)) OR (δ < 0) THEN
+
+                        S_act ← S_cand
+
+                    IF Cost(S_act) < Cost(S_mejor) THEN
+                        S_mejor ← S_act
+
+                END
+
+            IF N_Iteracion % 10 == 0
+
+                T ← β(T) {En lugar de enfriar, calentar un poco}
+            ELSE
+            
+                T ← α(T) { En nuestro caso, T ← α * T }
+
+        END
+
+    {Devuelve el mejor S visitado (S_mejor)}
+
+END
