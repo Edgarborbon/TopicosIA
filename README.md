@@ -36,5 +36,5 @@ Se implementó el algoritmo del Recocido simulado el cual es crucial para escapa
 
 Compañera de Equipo: Millán López Ana Karen
 
-* **ARCHIVO:** [Carpeta de proyecto]([https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/5234a28e6ba0bad6b457bedf58fba85ae238abe5/MODULO%201/Proyecto.pdf](https://github.com/Edgarborbon/TopicosIA/tree/main/MODULO%202/Recocido_Rutas))
+* **ARCHIVO:** [https://github.com/Edgarborbon/TopicosIA]([https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/5234a28e6ba0bad6b457bedf58fba85ae238abe5/MODULO%201/Proyecto.pdf](https://github.com/Edgarborbon/TopicosIA/tree/main/MODULO%202/Recocido_Rutas))
 
