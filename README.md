@@ -38,3 +38,17 @@ Compañera de Equipo: Millán López Ana Karen
 
 * **ARCHIVO:** https://github.com/Edgarborbon/TopicosIA/tree/main/MODULO%202/Recocido_Rutas
 
+### MÓDULO 3: Algoritmos Bio Inspirados
+
+* **PROYECTO 1:** Mapeo de Optimización de Colocación de Sensores para Riego Eficiente en Guasave, Sinaloa, Mediante Enjambre de Particulas (PSO)
+
+Este proyecto aborda un desafío central en la agricultura de precisión de la región de Guasave, Sinaloa : la optimización de la eficiencia del riego.
+
+El objetivo fundamental es determinar la colocación óptima de un número limitado de sensores en campos de Maíz, Tomate y Chile. Se implementó el algoritmo heurístico Optimización por Enjambre de Partículas (PSO), el cual fue crucial para modelar y resolver un complejo problema multidimensional.
+
+El modelo optimiza la ubicación de los sensores considerando variables críticas como la Elevación (m) y la Salinidad (dS/m) del suelo , buscando minimizar la diferencia promedio entre cualquier punto del cultivo y su sensor más cercano para fomentar una gestión hídrica más sostenible.
+
+Compañera de Equipo: Millán López Ana Karen
+
+* **ARCHIVO:** https://github.com/Edgarborbon/TopicosIA/tree/main/MODULO%202/Recocido_Rutas
+
