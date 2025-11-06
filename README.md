@@ -50,5 +50,22 @@ El modelo optimiza la ubicación de los sensores considerando variables crítica
 
 Compañera de Equipo: Millán López Ana Karen
 
-* **ARCHIVO:** https://github.com/Edgarborbon/TopicosIA/tree/main/MODULO%202/Recocido_Rutas
+* **ARCHIVO - Código:** https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/main/MODULO%203%20/%20Optimización%20de%20Riego%20con%20Enjambre%20de%20Partículas%20/%20Código%20/mainV1.py
+
+* **ARCHIVO - Pruebas:** https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/main/MODULO%203%20/%20Optimización%20de%20Riego%20con%20Enjambre%20de%20Partículas%20/%20Pruebas%20/Pruebas.pdf
+
+* **ARCHIVO - Documentación Técnica:** https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/main/MODULO%203%20/%20Optimización%20de%20Riego%20con%20Enjambre%20de%20Partículas%20/Optimización%20de%20Colocación%20de%20Sensores%20para%20Riego%20Eficiente%20en%20Guasave%2C%20Sinaloa%2C%20Mediante%20Enjambre%20de%20Partículas%20(PSO).pdf
+
+* **TRABAJO BONUS 1:** Evolución diferencial
+
+  En este Trabajo Bonus realizamos 2 tareas:
+
+    * Optimización por Enjambre de Partículas (PSO): Un script de Python que usa pyswarms para encontrar el mínimo global de la función esfera. El código incluye una visualización animada del enjambre buscando la solución.
+    * Evolución Diferencial (ED): Un trabajo de investigación que define el algoritmo de ED, explica su mecanismo (mutación, recombinación y selección) y analiza sus aplicaciones, ventajas y desventajas.
+
+  Compañera de Equipo: Millán López Ana Karen
+
+* **ARCHIVO - Tarea 1:** https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/main/MODULO%203%20/%20Trabajo%20Bonus%20I%20-%20Evolución%20diferencial%20/%20Tarea%201%20/mainpyswarms.py
+* **ARCHIVO - Tarea 2:** https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/main/MODULO%203%20/%20Trabajo%20Bonus%20I%20-%20Evolución%20diferencial%20/%20Tarea%202%20/TAREA%202%20BONUS%20I%20-%20EVOLUCIÓN%20DIFERENCIAL.pdf
+
 
