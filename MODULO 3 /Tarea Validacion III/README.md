@@ -9,7 +9,7 @@ El script original (`AG.py`) fue reparado y agilizado, resultando en el nuevo sc
 
 ### 1. Modificación a Programación Orientada a Objetos
 
-* **Cambio: (`TareaValidacionIII.py`):** Toda la lógica del algoritmo se ha reestructurado dentro de una clase principal: `AlgoritmoGenetico`. Las funciones originales ahora son métodos privados de cada objeto
+* **Cambio:** Toda la lógica del algoritmo se ha reestructurado dentro de una clase principal: `AlgoritmoGenetico`. Las funciones originales ahora son métodos privados de cada objeto
 * **Beneficio:** Este diseño es mucho más limpio, organizado y fácil de mantener. Los parámetros del algoritmo se almacenan como atributos de la clase en lugar de tener que pasarlos como argumentos a cada función.
 
 ### 2. Optimización de Eficiencia
