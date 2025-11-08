@@ -42,7 +42,7 @@ El script original (`AG.py`) fue reparado y agilizado, resultando en el nuevo sc
 
   Ejecutar el script desde terminal:
   
-    ```bash
+    
     python TareaValidacionIII.py
-    ```
+    
  O en su defecto, abrir con VSCode y ejecutar localmente.
