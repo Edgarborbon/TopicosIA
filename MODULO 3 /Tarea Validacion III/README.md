@@ -41,6 +41,7 @@ El script original (`AG.py`) fue reparado y agilizado, resultando en el nuevo sc
 ## Ejecución
 
   Ejecutar el script desde terminal:
+  
     ```bash
     python TareaValidacionIII.py
     ```
