@@ -27,7 +27,8 @@ El script original (`AG.py`) fue reparado y agilizado, resultando en el nuevo sc
 
 ### 4. Pruebas locales
 
-* **Cambio:** Se añadió una función `prueba()`. Verifica la lógica de `Individuo.distanciaRuta` con un caso conocido (un cuadrado con distancia 40.0) para asegurar que algoritmo sea correcto.
+* **Cambio:** Se añadió una función `prueba()`. Verifica la lógica de `Individuo.distanciaRuta` con un caso conocido (un cuadrado con distancia 40.0) para asegurar que algoritmo sea correcto. Los datos necesarios para las pruebas se cargan de forma local
+* dentro del código. Esto con la función de que sea lo más ligero posible, ya que el propósito es simplemente verificar que se comprende la lógica detrás del algoritmo genético.
 
 ## Dependencias
 
