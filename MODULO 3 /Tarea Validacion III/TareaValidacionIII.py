@@ -31,9 +31,10 @@ class Municipio:
         Returns:
          La distancia calculada
         """
+        #Como se maneja esto dentro de un cuadrado ficticio 2D, calculamos los dos "lados" del triángulo que usaremos para calcular la distancia con el teorema de Pitágoras
         distanciaX = abs(self.x - siguienteMunicipio.x)
         distanciaY = abs(self.y - siguienteMunicipio.y)
-        distancia = np.sqrt((distanciaX ** 2) + (distanciaY ** 2))
+        distancia = np.sqrt((distanciaX ** 2) + (distanciaY ** 2)) # Pitágoras (a^2 + b^2 = c^2) para encontrar la distancia recta
         return distancia
 
     def __repr__(self):
@@ -79,15 +80,15 @@ class Individuo:
         Returns:
          La distancia total de la ruta
         """
-        if self.distancia == 0:
+        if self.distancia == 0: #Garantizamos que solo se calcule si no se ha hecho antes
             distanciaTotal = 0
             for i in range(len(self.ruta)):
                 puntoInicial = self.ruta[i]
                 puntoFinal = None
-                if i + 1 < len(self.ruta):
+                if i + 1 < len(self.ruta): 
                     puntoFinal = self.ruta[i + 1]
                 else:
-                    # Regreso al inicio
+                    # Si es la última ciudad del recorrido, regresamos al punto de partida
                     puntoFinal = self.ruta[0]
                 distanciaTotal += puntoInicial.distancia(puntoFinal)
             self.distancia = distanciaTotal
@@ -107,7 +108,7 @@ class Individuo:
         if self.aptitud == 0:
             # Asegura que la distancia esté calculada
             self.distanciaRuta()
-            self.aptitud = 1.0 / float(self.distancia)
+            self.aptitud = 1.0 / float(self.distancia) #Una distancia corta da una aptitud larga, y viceversa
         return self.aptitud
     
     def __repr__(self):
@@ -152,6 +153,7 @@ class AlgoritmoGenetico:
         Returns:
          Una nueva lista con los municipios en orden aleatorio
         """
+        #Usamos random.sample para revolver el orden de la lista
         ruta = random.sample(self.listaMunicipios, len(self.listaMunicipios))
         return ruta
 
@@ -162,6 +164,8 @@ class AlgoritmoGenetico:
         Crea la población inicial llamando a 
         '_crearRuta' n cantidad de veces.
         """
+
+        #Crear la primera generacion
         for _ in range(self.tamañoPoblacion):
             rutaAleatoria = self._crearRuta()
             self.poblacion.append(Individuo(rutaAleatoria))
@@ -176,7 +180,8 @@ class AlgoritmoGenetico:
         Returns:
          Una lista de 'Individuo' ordenada descendentemente
         """
-        return sorted(self.poblacion, key=lambda i: i.aptitud, reverse=True) #Ordenamos de forma descendente usando el propio [sorted] de Python. La función lamda le indica que solo los ordene según su aptitud
+        #Ordenamos de forma descendente usando el propio [sorted] de Python. La función lamda le indica que solo los ordene según su aptitud
+        return sorted(self.poblacion, key=lambda i: i.aptitud, reverse=True) 
 
     def _seleccionRutas(self, poblacionClasificada):
         """
@@ -195,14 +200,16 @@ class AlgoritmoGenetico:
             grupoApareamiento.append(poblacionClasificada[i])
         
         # Los restantes, se seleccionan de manera aleatoria (Reemplazo de df.cumsum())
+
+        # Calculamos la suma de todas las aptitudes
         totalAptitud = sum(i.aptitud for i in poblacionClasificada)
         
         for _ in range(self.tamañoPoblacion - self.indivSelecionados):
-            puntoAleatorio = random.uniform(0, totalAptitud)
+            puntoAleatorio = random.uniform(0, totalAptitud) #Escogemos al azar 
             sumaActual = 0
-            for individuo in poblacionClasificada:
+            for individuo in poblacionClasificada: #Recorremos la muestra sumando una por una
                 sumaActual += individuo.aptitud
-                if sumaActual > puntoAleatorio:
+                if sumaActual > puntoAleatorio: #Si la suma supera al número escogido al azar, ese individuo es seleccionado
                     grupoApareamiento.append(individuo)
                     break
                     
@@ -219,18 +226,23 @@ class AlgoritmoGenetico:
          El hijo, un nuevo objeto 'Individuo'
         """
         hijo = []
-        hijoP1 = []
+        hijoP1 = [] #Los genes que vienen del progenitor 1
         
+        # Definimos 2 puntos aleatorios que definirán el "corte" de la ruta
         generacionX = int(random.random() * len(progenitor1.ruta))
         generacionY = int(random.random() * len(progenitor1.ruta))
         
+        # Nos aseguramos de que estén ordenados correctamente
         generacionInicial = min(generacionX, generacionY)
         generacionFinal = max(generacionX, generacionY)
-
+        
+        # Seleccionamos los genes dentro de los 2 puntos definidos anteriormente
         for i in range(generacionInicial, generacionFinal):
             hijoP1.append(progenitor1.ruta[i])
             
+        # Rellenamos el resto de la ruta con los genes del progenitor 2, asegurandonos que no haya duplicados    
         hijoP2 = [gen for gen in progenitor2.ruta if gen not in hijoP1]
+        # Juntamos ambas selecciones, creando un "hijo"
         hijo = hijoP1 + hijoP2
         
         return Individuo(hijo)
@@ -255,6 +267,8 @@ class AlgoritmoGenetico:
         # Cruce
         padresMezclados = random.sample(grupoApareamiento, len(grupoApareamiento))
         
+
+        # Tomamos un padre del inicio y uno del final, para garantizar que sea un cruce aleatorio
         for i in range(self.indivSelecionados, self.tamañoPoblacion):
             progenitor1 = padresMezclados[i]
             progenitor2 = padresMezclados[len(grupoApareamiento) - i - 1]
@@ -277,7 +291,7 @@ class AlgoritmoGenetico:
         """
         mutado = False
         for i in range(len(individuo.ruta)):
-            if random.random() < self.razonMutacion:
+            if random.random() < self.razonMutacion: # Generamos un numero random y si ese número es menor a la razonMutacion definida, mutamos
                 j = int(random.random() * len(individuo.ruta))
                 
                 # Swap
@@ -307,6 +321,7 @@ class AlgoritmoGenetico:
          La población mutada 
         """
         poblacionMutada = []
+        # Revisamos cada hijo y se intenta mutar en caso de ser posible
         for individuo in poblacionHijos:
             individuoMutado = self._mutacion(individuo)
             poblacionMutada.append(individuoMutado)
@@ -368,13 +383,15 @@ def prueba():
     En este caso, creamos un 'cuadro' y definimos
     """
     print("\n[Inicio]")
+
+    #Creamos el cuadro ficticio para calcular distancias, de 10x10
     m1 = Municipio(0, 0)
     m2 = Municipio(0, 10)
     m3 = Municipio(10, 10)
     m4 = Municipio(10, 0)
     
     rutaPrueba = [m1, m2, m3, m4]
-    distanciaEsperada = 40.0
+    distanciaEsperada = 40.0 # 10 de distancia de m1 a 2, luego a 3, luego a 4 y de vuelta a 1, 4x10 = 40
     
     indivPrueba = Individuo(rutaPrueba)
     distanciaFinal = indivPrueba.distancia
@@ -419,6 +436,7 @@ if __name__ == '__main__':
     # Impresión de resultados finales
     print("\n-------------------------------------------------")
     print("Mejor ruta encontrada: ")
+    # Usamos join para formatear y darle una estructura a la impresión, separando el recorrido con un ->
     formatoImpresion = " -> ".join([str(individuo) for individuo in mejorSolucion.ruta])
     print(formatoImpresion + f" -> {mejorSolucion.ruta[0]}") 
     print(f"Distancia final: {mejorSolucion.distancia}")
