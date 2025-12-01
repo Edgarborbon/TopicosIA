@@ -79,3 +79,16 @@ https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/main/MODULO%203%20/%20Tare
 
 ### Archivo - Código
 https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/main/MODULO%203%20/%20Tarea%20de%20Validación%20III/TareaValidacionIII.py
+
+### MODULO 4 - 
+## Proyecto de Sistema De Detección Y Gestión De Placas Vehiculares (Full-Stack)
+Este proyecto aborda un desafío social central: la **falta de respeto a los espacios de estacionamiento designados para personas con discapacidades**. El sistema ofrece una solución **móvil y automatizada** para la identificación instantánea y el reporte de vehículos infractores.
+
+El objetivo fundamental es **diseñar, implementar y documentar un sistema full-stack** capaz de detectar con precisión matrículas a partir de imágenes (Visión Artificial) y asociarlas eficientemente con los datos de sus propietarios para la gestión de incidentes.
+
+Se implementó una arquitectura **Cliente-Servidor de tres capas**, siendo crucial la **Capa de IA** que utiliza un modelo híbrido de **Ultralytics YOLO** (Detección) y **EasyOCR + PaddleOCR** (Reconocimiento de texto) para asegurar la robustez de la identificación de la placa. El modelo optimiza la **identificación de infractores** y la **gestión de notificaciones**, buscando garantizar el respeto a los derechos y espacios de las personas con necesidades especiales.
+
+**Compañera de Equipo: Millán López Ana Karen**
+### Archivo - Documentación técnica
+https://github.com/AnaKMLopez/ITCAKML-Topicos-IA/blob/main/MODULO%204%20/%20Sistema%20De%20Detección%20Y%20Gestión%20De%20Placas%20Vehiculares%20(Full-Stack)%20/Sistema%20De%20Detección%20Y%20Gestión%20De%20Placas%20Vehiculares%20(Full-Stack).pdf
+
